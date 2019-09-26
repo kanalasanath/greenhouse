@@ -44,7 +44,7 @@ public class JdbcRestPasswordService implements ResetPasswordService {
 	
 	private final ResetPasswordMailer mailer;
 	
-	private final StringKeyGenerator tokenGenerator = KeyGenerators.string();
+	private final StringKeyGenerator tokenGenerator = KeyGenerators.toString();
 	
 	@Inject
 	public JdbcRestPasswordService(JdbcTemplate jdbcTemplate, AccountRepository accountRepository, ResetPasswordMailer mailer) {
